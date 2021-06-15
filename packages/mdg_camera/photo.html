@@ -1,0 +1,77 @@
+<template name="camera">
+  <div class="camera-overlay">
+    {{! used to make the background dark}}
+  </div>
+
+  <div class="camera-popup {{#if permissionDeniedError}}camera-popup-wide{{/if}}">
+    {{#if error}}
+      {{#if permissionDeniedError}}
+        {{> permissionDenied}}
+      {{else}}
+        {{#if browserNotSupportedError}}
+          {{> genericError message="errorBrowserNotSupported"}}
+        {{else}}
+          {{> genericError message="errorAccesingCamera"}}
+        {{/if}}
+      {{/if}}
+    {{else}}
+      {{#if photo}}
+        <div class="center">
+          <img src="{{photo}}" class="photo-preview" />
+          <div>
+            <button class="button use-photo">{{translate "usePhoto"}}</button>
+            <button class="button new-photo">{{translate "takeNewPhoto"}}</button>
+          </div>
+        </div>
+      {{else}}
+        {{> viewfinder}}
+      {{/if}}
+    {{/if}}
+  </div>
+</template>
+
+<template name="viewfinder">
+  <div class="viewfinder">
+    <video id="video" class="{{#if waitingForPermission}}hidden{{/if}}">
+      </video>
+
+    <div>
+      {{#if waitingForPermission}}
+        <p>{{translate "waitingPermissions"}}</p>
+      {{else}}
+        <button class="button shutter">{{translate "takePhoto"}}</button>
+      {{/if}}
+      <button class="button cancel">{{translate "cancel"}}</button>
+    </div>
+  </div>
+
+  <canvas id="canvas" style="visibility: hidden"></canvas>
+</template>
+
+<template name="genericError">
+  <div class="generic-error">
+    <p>{{translate message}}</p>
+    <button class="button cancel">{{translate "closePopup"}}</button>
+  </div>
+</template>
+
+<template name="permissionDenied">
+  <div class="permission-denied-error">
+    <h2>{{translate "permissionsDenied"}}</h2>
+
+    <p>
+      {{translate "permissionsDeniedExp"}}
+    </p>
+
+    <dl class="permissions-howto">
+      <dt>Google Chrome</dt>
+        <dd>{{translate "howToChrome"}}</dd>
+      <dt>Mozilla Firefox</dt>
+        <dd>{{translate "howToFirefox"}}</dd>
+      <dt>Opera</dt>
+        <dd>{{translate "howToOpera"}}</dd>
+    </dl>
+
+    <button class="button cancel">{{translate "closePopup"}}</button>
+  </div>
+</template>

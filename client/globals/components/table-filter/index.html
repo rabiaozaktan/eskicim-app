@@ -1,0 +1,21 @@
+<template name="componentsTableFilter">
+  <div class="dropdown">
+    <a class="text-dark dropdown-toggle componentsTableFilter text-decoration-none" id="tableFilter_{{key}}" data-bs-toggle="dropdown" aria-expanded="false">
+      {{title}}
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="tableFilter_{{key}}">
+      {{#each filterList filters.get key}}
+        <li class="ms-3">
+          <div class="form-check form-check-inline dropdown-item brd-table-filter">
+            {{#if checked}}
+              <input class="form-check-input" type="checkbox" checked id="tableFilterCheck_{{field}}">
+            {{else}}
+              <input class="form-check-input" type="checkbox" id="tableFilterCheck_{{field}}">
+            {{/if}}
+            <label class="form-check-label" for="tableFilterCheck_{{field}}">{{text}}</label>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</template>

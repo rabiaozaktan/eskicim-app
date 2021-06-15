@@ -1,0 +1,6 @@
+<template name="customerLayoutDefault">
+  {{#if isInRole 'roles.customer'}}
+    {{> Template.dynamic template=page}}
+  {{/if}}
+  {{> Loading}}
+</template>

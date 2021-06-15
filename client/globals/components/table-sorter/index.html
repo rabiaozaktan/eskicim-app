@@ -1,0 +1,13 @@
+<template name="componentsTableSorter">
+  <a class="brd-table-sorter {{#if eq key sorting.get.field}}text-dark{{else}}text-black-50{{/if}} text-decoration-none componentsTableSorter" href="#">
+
+    {{#if eq key sorting.get.field}}
+      {{#if eq 1 sorting.get.order}}
+        <i class="fas fa-sort-amount-up-alt"></i>
+      {{else}}
+        <i class="fas fa-sort-amount-up"></i>
+      {{/if}}
+    {{else}}
+      <i class="fas fa-sort-amount-up-alt"></i>
+    {{/if}} {{title}}</a>
+</template>

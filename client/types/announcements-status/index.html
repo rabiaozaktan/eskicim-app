@@ -1,0 +1,21 @@
+<template name="typeWAnnouncementsStatus">
+  {{#if eq status 'opened'}}
+    <span class="badge bg-warning">Açık</span>
+  {{/if}}
+
+  {{#if eq status 'closed'}}
+    <span class="badge bg-success">Kapalı</span>
+  {{/if}}
+
+  {{#if eq status 'canceled'}}
+    <span class="badge bg-danger">İptal edildi</span>
+  {{/if}}
+
+  {{#if eq status 'expired'}}
+    <span class="badge bg-danger">İSüresi geçti</span>
+  {{/if}}
+
+  {{#if eq status 'sold'}}
+    <span class="badge bg-danger">Satıldı</span>
+  {{/if}}
+</template>

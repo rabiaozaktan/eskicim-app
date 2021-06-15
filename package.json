@@ -1,0 +1,30 @@
+{
+  "name": "eskicim-app",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "@fancyapps/fancybox": "^3.5.7",
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "@popperjs/core": "^2.6.0",
+    "@types/meteor": "^1.4.66",
+    "animate.css": "^4.1.1",
+    "array-query": "^0.1.2",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.0.0-beta1",
+    "datatables.net": "^1.10.23",
+    "fullpage.js": "^3.0.9",
+    "google-maps": "^4.3.3",
+    "jquery": "^3.5.1",
+    "meteor-node-stubs": "^1.0.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.11",
+    "plaid": "^6.0.0",
+    "popper.js": "^1.16.1",
+    "simpl-schema": "^1.10.2",
+    "slugify": "^1.4.6",
+    "stripe": "^8.129.0",
+    "sweetalert2": "^10.12.5",
+    "tableexport": "^5.2.0"
+  }
+}

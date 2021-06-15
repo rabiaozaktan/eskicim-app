@@ -1,0 +1,30 @@
+<template name="receiverPageProfile">
+
+  {{> receiverComponentNavbar title='Profil'}}
+
+  <div class="py-2 px-2 loading-temp" style="height: calc(100% - 123px);">
+
+    {{#with currentUser}}
+      <div class="card shadow-sm mb-2">
+
+        <div class="d-flex">
+          <div class="p-2 text-center">
+            <img style="height: 45px;width: 45px;" src="/assets/svg/user-icon.svg">
+          </div>
+          <div class="p-2">
+            <p class="font-weight-bold mb-0">{{profile.firstname}} {{profile.lastname}}</p>
+            <span class="small text-muted">Email: {{emails.[0].address}}</span>
+          </div>
+        </div>
+      </div>
+    {{/with}}
+
+    <div class="list-group shadow-sm">
+      <a href="#" class="list-group-item list-group-item-action brd-log-out"><i class="fas fa-sign-out-alt"></i> Çıkış</a>
+    </div>
+
+  </div>
+
+  {{> receiverComponentNavbarBottom isHomeActive=false isAnnouncementActive=false isProfileActive=true}}
+
+</template>

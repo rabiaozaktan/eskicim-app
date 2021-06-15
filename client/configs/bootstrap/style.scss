@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300&display=swap');
+$font-family-base: 'Overpass';
+
+$primary:#731b95;
+$secondary:#c32011;
+// $success:#28a745;
+// $danger:#dc3545;
+// $info:#4A90E2;
+// $warning:#2A2B2D;
+// $light:#f8f9fa;
+// $dark:#343434;
+
+// $border-color: #eae9f2;
+$body-bg: rgb(250, 253, 253);
+// $body-color: #2d3748;
+// $input-border-color: #eae9f2;
+// $form-label-font-weight: 600;
+// $nav-link-color: lighten($secondary, 40%);
+// $enable-negative-margins: true;
+// $pagination-color: $secondary;
+// $pagination-focus-color: $secondary;
+// $pagination-hover-color: $secondary;
+// $pagination-active-bg: $secondary;
+// $pagination-focus-box-shadow: none;
+
+$themeCustomRadius: 15px;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+$utilities: ('opacity': (property: opacity,
+    responsive: true,
+    values: (0: 0,
+      25: .25,
+      50: .5,
+      75: .75,
+      100: 1,
+    )));
+
+@import '{}/node_modules/bootstrap/scss/bootstrap.scss';
+
+// header font
+.brd-font-size-bg {
+  font-size: 60px !important;
+}
+
+@media (max-width: 767px) {
+  .brd-font-size-bg {
+    font-size: 36px !important;
+  }
+}
+
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-zoom: none;
+}
+
+// change scroll - START
+::-webkit-scrollbar {
+  width: 6px;
+
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, rgba(199, 199, 199, 0) 0%, rgba(199, 199, 199, 1) 35%, rgba(199, 199, 199, 1) 65%, rgba(199, 199, 199, 0) 100%);
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bs-primary);
+  border: 2px solid var(--bs-primary);
+  border-radius: 6px;
+  width: 5px;
+}
+
+// change scroll - END
+
+
+// Theme glass - START
+.swal2-popup {
+  border-radius: $themeCustomRadius !important;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.1),
+    0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  transition: 0.15s all ease;
+}
+
+.swal2-styled.swal2-confirm {
+  color: #fff !important;
+  // background-color: var(--bs-primary) !important;
+  border-radius: 28px !important;
+  min-width: 150px;
+}
+
+.swal2-styled.swal2-cancel {
+  color: #fff !important;
+  // background-color: var(--bs-danger) !important;
+  border-radius: 28px !important;
+  min-width: 150px;
+}
+
+.swal2-container {
+
+  &.swal2-backdrop-show,
+  &.swal2-noanimation {
+    background: rgba(255, 255, 255, 0.0);
+    backdrop-filter: blur(14.0px);
+    -webkit-backdrop-filter: blur(14.0px);
+  }
+}
+
+.modal-content {
+  border: unset;
+  border-radius: $themeCustomRadius;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.1),
+    0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+
+.modal-backdrop {
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(14.0px);
+  -webkit-backdrop-filter: blur(14.0px);
+
+  &.show {
+    opacity: unset;
+  }
+}
+
+// Theme glass - END
+
+.accordion-button {
+  padding: 10px 10px !important;
+  border: none !important;
+
+  &:focus {
+    box-shadow: none !important
+  }
+
+  &:not(.collapsed) {
+    color: #fff;
+    background-color: var(--bs-primary);
+
+    &::after {
+      filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(185deg) brightness(107%) contrast(100%);
+    }
+  }
+
+
+}
+
+.accordion-collapse {
+  border: none !important;
+
+}
+
+.glass {
+  background: rgba( 60, 61, 51, 0.9 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 2.0px );
+  -webkit-backdrop-filter: blur( 2.0px );
+  // border-radius: 10px;
+}
+
+.glass-white {
+  background: rgba( 255, 255, 255, 0.9 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 2.0px );
+  -webkit-backdrop-filter: blur( 2.0px );
+}
+
+.form-floating {
+  :focus {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.20);
+    border-color: #ddd;
+  }
+}

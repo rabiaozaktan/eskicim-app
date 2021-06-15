@@ -1,0 +1,60 @@
+<template name="receiverModalAnnouncement">
+
+  {{#let _announcement=(appUtil.temp.get 'announcement')}}
+    <div class="modal fade" id="brdReceiverModalAnnouncement" tabindex="-1" aria-labelledby="brdReceiverModalAnnouncement" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="brdReceiverModalAnnouncement">İlan Detayı</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            {{#with _announcement.user}}
+              <div class="card shadow-sm mb-2">
+                <div class="d-flex">
+                  <div class="p-2 text-center">
+                    <img style="height: 45px;width: 45px;" src="/assets/svg/user-icon.svg">
+                  </div>
+                  <div class="p-2">
+                    <p class="font-weight-bold mb-0">{{profile.firstname}} {{profile.lastname}}</p>
+                    <span class="small text-muted">Email: {{emails.[0].address}}</span>
+                  </div>
+                </div>
+              </div>
+            {{/with}}
+
+            <div class="card mb-2">
+              <div class="card-body d-flex">
+                <div id="brdProductCarousel" class="carousel carousel-dark slide border" style="width: 30%;" data-ride="carousel">
+                  <div class="carousel-inner">
+                    {{#each _announcement.images}}
+                      <div class="carousel-item {{#if eq @index 0}}active{{/if}}">
+                        <img src="{{this}}" class="d-block w-100" alt="{{text}}">
+                      </div>
+                    {{/each}}
+                  </div>
+                  <a class="carousel-control-prev" href="#brdProductCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#brdProductCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </a>
+                </div>
+                <div class="px-2">
+                  <p class="card-text">{{_announcement.descriptions}}</p>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary w-100 brd-announcement-closed">İlanı Al</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/let}}
+</template>

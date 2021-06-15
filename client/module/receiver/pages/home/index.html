@@ -1,0 +1,22 @@
+<template name="receiverPageHome">
+  {{> receiverComponentNavbar title='Eskici Ana Sayfa'}}
+
+  <div class="py-2 px-2 loading-temp" style="height: calc(100% - 123px);overflow-y: hidden;">
+
+    <div class="p-2 shadow mb-2 brd-custom-card">
+      <div class="d-flex mb-1">
+        <span class="fw-bold text-dark">Konumunuz</span>
+        <div class="ms-auto">
+          <button class="btn btn-secondary ms-2 brd-my-location"><i class="fas fa-map-marker-alt"></i></button>
+        </div>
+      </div>
+
+      <div id="map" style="height: 300px;"></div>
+    </div>
+
+  </div>
+
+  {{> receiverComponentNavbarBottom isHomeActive=true isSearchActive=false isAnnouncementActive=false isProfileActive=false}}
+
+  {{> receiverModalAnnouncement}}
+</template>

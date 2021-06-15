@@ -1,0 +1,50 @@
+<template name="publicPageSignup">
+  <div class="publicPageSignup brd-random-bg">
+    <div class="container py-3">
+      <div class="row">
+        <form>
+
+          <div class="col-md-12 d-flex justify-content-center my-3">
+            <img class="w-50" src="/assets/images/icon.svg" />
+          </div>
+          <p class="fw-bolder text-center text-white" style="font-size: xx-large;">Kayıt ol</p>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="firstname" placeholder=" " required>
+            <label for="firstname">Ad</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="lastname" placeholder=" " required>
+            <label for="lastname">Soyadı</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="identity" placeholder=" " required>
+            <label for="identity">Email Adres</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="tel" class="form-control" id="phone" placeholder=" " required>
+            <label for="phone">Telefon numarası</label>
+          </div>
+
+          <div class="form-floating mb-2">
+            <select class="form-select" id="userType" name="userType">
+              <option selcted value="receiver">Eskici</option>
+              <option value="customer">Kullanıcı</option>
+            </select>
+            <label for="santiyeId">Ünvan</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password" placeholder=" " required>
+            <label for="password">Şifre</label>
+          </div>
+
+          <button type="submit" class="btn w-100 btn-primary btn-lg"><i class="fas fa-check fa-fw me-1"></i> Kayıt Ol </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>

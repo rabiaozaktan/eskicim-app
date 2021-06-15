@@ -1,0 +1,6 @@
+<template name="adminLayoutDefault">
+  {{#if isInRole 'roles.admin'}}
+    {{> Template.dynamic template=page}}
+  {{/if}}
+  {{> Loading}}
+</template>

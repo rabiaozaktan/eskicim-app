@@ -1,0 +1,53 @@
+<template name="customerPageAnnouncement">
+
+  {{> customerComponentNavbar title='İlan oluştur' showBack=true }}
+
+  <div class="py-2 px-2 customerPageAnnouncement loading-temp" style="height: calc(100% - 56px);">
+
+    <div class="p-2 shadow mb-2 brd-custom-card">
+      <div class="d-flex mb-1">
+        <span class="fw-bold text-dark">Malzemenin fotoğrafları</span>
+        <div class="ms-auto">
+          <button class="btn btn-secondary ms-2 takePhoto"><i class="fas fa-camera-retro"></i></button>
+        </div>
+      </div>
+
+      <div class="position-relative overflow-hidden w-100" style="height: 200px;">
+        <div class="position-absolute start-0 top-0 w-100 h-100 overflow-auto">
+          <div class="d-inline-flex">
+            {{#each state.get 'images'}}
+              <div class="img-container">
+                <a href="#" class="brd-remove-image" data-index="{{@index}}">
+                  <i class="fas fa-trash-alt text-danger"></i>
+                </a>
+                <img id="imgContainer_{{@index}}" src="{{this}}">
+              </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-2 shadow mb-2 brd-custom-card">
+      <div class="d-flex mb-1">
+        <span class="fw-bold text-dark">Konumunuz</span>
+        <div class="ms-auto">
+          <button class="btn btn-secondary ms-2 brd-my-location"><i class="fas fa-map-marker-alt"></i></button>
+        </div>
+      </div>
+
+      <div id="map" style="height: 250px;"></div>
+    </div>
+
+    <form>
+      <div class="form-floating mb-2 shadow">
+        <input type="text" class="form-control" id="description" name="description" placeholder="Açıklama" autocomplete="off">
+        <label for="description">Açıklama</label>
+      </div>
+
+      <button type="submit" class="btn btn-secondary btn-lg w-100">Oluştur</button>
+    </form>
+
+  </div>
+
+</template>

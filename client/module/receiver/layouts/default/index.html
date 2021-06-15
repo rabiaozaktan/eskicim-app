@@ -1,0 +1,6 @@
+<template name="receiverLayoutDefault">
+  {{#if isInRole 'roles.receiver'}}
+    {{> Template.dynamic template=page}}
+  {{/if}}
+  {{> Loading}}
+</template>

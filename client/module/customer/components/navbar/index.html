@@ -1,0 +1,15 @@
+<template name="customerComponentNavbar">
+  <nav class="customerComponentNavbar navbar sticky-top shadow bg-primary text-white py-3">
+    <span class="brd-navbar-title fw-bold">{{title}}</span>
+    {{#if showBack}}
+      <a class="brd-back text-white ps-4" href="#"><i class="fas fa-hand-point-left fa-lg"></i> </a>
+    {{else}}
+      <a href="#"><i class="fal fa-chevron-left invisible"></i></a>
+    {{/if}}
+
+    {{#if showMessage}}
+      <button class="btn btn-outline-light brd-message-button"><i class="fas fa-location-arrow"></i></button>
+    {{/if}}
+
+  </nav>
+</template>

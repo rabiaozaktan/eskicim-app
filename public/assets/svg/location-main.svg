@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
+<g xmlns="http://www.w3.org/2000/svg">
+	<path style="" d="M256,0L156,256l100,256l148.892-144.308C446.877,327.01,470,272.427,470,214C470,96,374,0,256,0z" fill="#c32011" data-original="#b33e78" class=""/>
+	<path style="" d="M42,214c0,58.427,23.123,113.01,65.108,153.692L256,512V0C138,0,42,96,42,214z" fill="#c32011" data-original="#ff2b59" class=""/>
+	<path style="" d="M256,60l-60,245.342h183.988C398.846,279.786,410,248.198,410,214C410,128.948,341.052,60,256,60z" fill="#ffffff" data-original="#ffeac3" class=""/>
+	<path style="" d="M102,214c0,34.198,11.154,65.786,30.012,91.342H256V60C170.948,60,102,128.948,102,214z" fill="#ffffff" data-original="#ffffff" class=""/>
+	<path style="" d="M379.988,305.342c-10.867-15.348-28.751-25.378-48.988-25.378l-30,68.558h30   C350.255,337.763,366.961,322.996,379.988,305.342z" fill="#731b95" data-original="#09213d" class=""/>
+	<path style="" d="M132.012,305.342c13.027,17.654,29.733,32.422,48.988,43.18h30l-30-68.558   C160.763,279.964,142.879,289.993,132.012,305.342z" fill="#731b95" data-original="#233952" class=""/>
+	<path style="" d="M256,119.964l-32.5,65l32.5,65c35.899,0,65-29.102,65-65S291.899,119.964,256,119.964z" fill="#731b95" data-original="#ff9e90" class=""/>
+	<path style="" d="M191,184.964c0,35.898,29.101,65,65,65v-130C220.101,119.964,191,149.065,191,184.964z" fill="#731b95" data-original="#ffb4b3" class=""/>
+	<path style="" d="M271,279.964l-47.042,44.018L271,367.276c21.62-2.093,41.93-8.658,60-18.754v-68.558H271z" fill="#731b95" data-original="#89c1ff" class=""/>
+	<path style="" d="M241,279.964h-60v68.558c18.07,10.096,38.38,16.662,60,18.754l15-43.656L241,279.964z" fill="#731b95" data-original="#bfdcff" class=""/>
+	<path d="M256,279.964l-10,44.018L256,368c5.061,0,10.064-0.247,15-0.724v-87.312H256z" fill="#731b95" data-original="#000000" style="" class=""/>
+	<path style="" d="M241,279.964v87.312c4.936,0.478,9.939,0.724,15,0.724v-88.036H241z" fill="#731b95" data-original="#09213d" class=""/>
+</g>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</g></svg>

@@ -1,0 +1,40 @@
+<template name="publicPageSignin">
+  <div class="publicPageSignin brd-random-bg h-100">
+    <div class="container py-3">
+      <form>
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-center my-3">
+            <img class="w-50" src="/assets/images/icon.svg" />
+          </div>
+          <p class="fw-bolder text-center text-white" style="font-size: xx-large;">Giriş yap</p>
+
+          <div class="col-12">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="identity" placeholder=" " required>
+              <label for="identity">Email Adres</label>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="password" placeholder=" " required>
+              <label for="password">Şifre</label>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <a class="btn btn-secondary btn-lg w-100 shadow" href="/auth/signup">Kayıt Ol</a>
+          </div>
+
+          <div class="col-6">
+            <button type="submit" class="btn btn-primary btn-lg w-100 shadow">Giriş yap <i class="fas fa-chevron-right ms-2 pt-1"></i></button>
+          </div>
+
+          <div class="col-12 text-center mt-5">
+            <a href="/auth/forgot-password" class="fw-bolder text-white">Şifremi Unuttum</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>

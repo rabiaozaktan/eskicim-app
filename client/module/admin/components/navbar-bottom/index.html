@@ -1,0 +1,16 @@
+<template name="adminComponentNavbarBottom">
+  <nav class="adminComponentNavbarBottom navbar fixed-bottom text-center bg-white p-3 shadow-lg">
+    <div class="col">
+      <a href="/"><i class="fas fa-home fa-lg {{#if isHomeActive}}active{{/if}}"></i></a>
+    </div>
+    <div class="col">
+      <a href="/search"><i class="fas fa-search fa-lg {{#if isSearchActive}}active{{/if}}"></i></a>
+    </div>
+    <div class="col">
+      <a href="/announcements"><i class="fas fa-bullhorn fa-lg {{#if isAnnouncementActive}}active{{/if}}"></i></a>
+    </div>
+    <div class="col">
+      <a href="/profile"><i class="fas fa-user fa-lg {{#if isProfileActive}}active{{/if}}"></i></a>
+    </div>
+  </nav>
+</template>

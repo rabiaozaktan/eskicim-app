@@ -1,0 +1,18 @@
+{
+  "_locale": "en",
+  "_namespace": "globals",
+
+  "ok": "OK",
+  "yes": "Yes",
+  "no": "No",
+
+  "swal": {
+    "swal": {
+      "errorTitle": "Oops!",
+      "successful": "Başarılı",
+      "information": "Bilgilendirme",
+      "updated": "Kayıt başarıyla güncellendi.",
+      "saved": "Kayıt başarıyla kayıt edildi."
+    }
+  }
+}

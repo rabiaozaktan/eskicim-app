@@ -1,0 +1,54 @@
+<template name="receiverPageAnnouncement">
+
+  {{> customerComponentNavbar title='İşlerim'}}
+
+  <div class="py-2 px-2 loading-temp" style="height: calc(100% - 123px);">
+
+    <div class="d-flex">
+      <div class="input-group mb-3">
+        <input type="search" class="form-control" placeholder="Ara" aria-label="Ara">
+      </div>
+
+      <div class="ms-auto">
+        <button class="btn btn-secondary ms-2">Ara</button>
+      </div>
+    </div>
+
+    <div class="content" style="height: calc(100% - 54px);">
+
+      {{#each state.get 'announcements'}}
+        <div class="card mb-2">
+          <a href="/message/home/{{channelId}}" class="text-decoration-none text-dark">
+            <div class="card-body d-flex">
+              <div id="brdProductCarousel{{@index}}" class="carousel carousel-dark slide border" style="width: 30%;" data-ride="carousel">
+                <div class="carousel-inner">
+                  {{#each images}}
+                    <div class="carousel-item {{#if eq @index 0}}active{{/if}}">
+                      <img src="{{this}}" class="d-block w-100" alt="{{text}}">
+                    </div>
+                  {{/each}}
+                </div>
+                <a class="carousel-control-prev" href="#brdProductCarousel{{@index}}" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#brdProductCarousel{{@index}}" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </a>
+              </div>
+              <div class="px-2">
+                <p class="card-text">{{descriptions}}</p>
+                <p class="card-text">{{user.profile.firstname}} {{user.profile.lastname}} <span class="float-end"> {{> typeWAnnouncementsStatus status=status}} </span> </p>
+
+              </div>
+            </div>
+          </a>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+  {{> receiverComponentNavbarBottom isHomeActive=false isAnnouncementActive=true isProfileActive=false}}
+
+</template>
